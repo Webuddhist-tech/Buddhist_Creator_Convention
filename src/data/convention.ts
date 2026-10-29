@@ -15,7 +15,7 @@ export const CONVENTION_PHASES: ConventionPhase[] = [
   {
     id: "phase-1",
     phase: "Phase 1",
-    dates: "29 – 30 January",
+    dates: "29 – 30 January 2026",
     title: "Community Days & Opening Ceremony",
     summary:
       "Registration, an opening dinner at Shechen Monastery, the inaugural ceremony, a panel on Buddhism in the digital age, 27 lightning talks, and community circles — building the foundation for the week ahead.",
@@ -23,7 +23,7 @@ export const CONVENTION_PHASES: ConventionPhase[] = [
   {
     id: "phase-2",
     phase: "Phase 2",
-    dates: "31 January – 5 February",
+    dates: "31 January – 5 February 2026",
     title: "Masterclass: Marketing the Dharma",
     summary:
       "Six intensive days led by Mr. Milan Amin and Dr. Jaimin Shukla, covering six modules from digital marketing foundations to sustainable creator practice — 82% of participants rated it very effective.",
@@ -31,7 +31,7 @@ export const CONVENTION_PHASES: ConventionPhase[] = [
   {
     id: "phase-3",
     phase: "Phase 3",
-    dates: "6 February",
+    dates: "6 February 2026",
     title: "Award Ceremony & Closing",
     summary:
       "A masterclass recap, the Buddhist Influencer of the Year 2026 awards, certificate distribution, a closing ceremony and prayer meet at the Mahabodhi Temple, and a gala dinner.",

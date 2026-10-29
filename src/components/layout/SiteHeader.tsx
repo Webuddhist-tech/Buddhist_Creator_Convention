@@ -1,21 +1,20 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { label: "Home", to: "/" },
-  { label: "About", to: "/about" },
-  { label: "Programs", to: "/programs" },
   { label: "Convention", to: "/convention" },
   { label: "Awards", to: "/awards" },
-  { label: "Get Involved", to: "/get-involved" },
+  { label: "Influencer Clubs", to: "/influencer-club" },
+  { label: "Creator Studio", to: "/creator-studio" },
 ];
 
 export const SiteHeader = () => {
+  const { pathname } = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -34,7 +33,8 @@ export const SiteHeader = () => {
     };
   }, [menuOpen]);
 
-  const showSolid = scrolled || menuOpen;
+  // The transparent bar sits over the home hero. Every other page uses a solid bar.
+  const showSolid = !isHome || scrolled || menuOpen;
 
   return (
     <header
@@ -44,7 +44,18 @@ export const SiteHeader = () => {
       )}
     >
       <div className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between gap-3">
-        <Link to="/" aria-label="Buddhist Creators home" className="flex items-center gap-2 min-w-0 shrink">
+        <Link
+          to="/convention"
+          aria-label="Buddhist Creators convention"
+          onClick={(event) => {
+            setMenuOpen(false);
+            if (pathname === "/convention") {
+              event.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+          className="flex items-center gap-2 min-w-0 shrink"
+        >
           <img
             src={showSolid ? "/images/brand/logo-dark.png" : "/images/brand/logo.png"}
             alt="Buddhist Creators"
@@ -65,7 +76,6 @@ export const SiteHeader = () => {
             <NavLink
               key={link.to}
               to={link.to}
-              end={link.to === "/"}
               className={({ isActive }) =>
                 cn(
                   "px-3 xl:px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors",
@@ -83,15 +93,6 @@ export const SiteHeader = () => {
             </NavLink>
           ))}
         </nav>
-
-        <div className="hidden lg:block shrink-0">
-          <Button
-            className="bg-primary hover:bg-primary-light text-primary-foreground shadow-elevated rounded-full px-6"
-            asChild
-          >
-            <Link to="/get-involved">Get Involved</Link>
-          </Button>
-        </div>
 
         <button
           type="button"
@@ -114,7 +115,6 @@ export const SiteHeader = () => {
               <NavLink
                 key={link.to}
                 to={link.to}
-                end={link.to === "/"}
                 onClick={() => setMenuOpen(false)}
                 className={({ isActive }) =>
                   cn(
@@ -126,13 +126,6 @@ export const SiteHeader = () => {
                 {link.label}
               </NavLink>
             ))}
-            <Button
-              className="mt-2 bg-primary hover:bg-primary-light text-primary-foreground rounded-full"
-              asChild
-              onClick={() => setMenuOpen(false)}
-            >
-              <Link to="/get-involved">Get Involved</Link>
-            </Button>
           </nav>
         </div>
       )}

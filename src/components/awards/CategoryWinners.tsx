@@ -6,10 +6,10 @@ import { Reveal } from "@/components/shared/Reveal";
 
 export const CategoryWinners = () => {
   return (
-    <section id="winners" className="bg-gradient-section py-16 scroll-mt-20 sm:py-20 md:py-28">
+    <section className="bg-gradient-section py-16 scroll-mt-20 sm:py-20 md:py-28">
       <div className="container mx-auto px-4">
         <SectionHeading
-          eyebrow="The Winners"
+          eyebrow="Category awards"
           title="Four more creators recognised at BCC 2026"
           description="Nominations for these categories were open exclusively to creators present at the convention, judged on work they made during the nine days in Bodh Gaya."
           className="mb-12 md:mb-16"

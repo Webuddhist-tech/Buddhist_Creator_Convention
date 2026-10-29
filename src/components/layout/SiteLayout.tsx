@@ -3,9 +3,11 @@ import { useEffect } from "react";
 import { SiteHeader } from "./SiteHeader";
 import { SiteFooter } from "./SiteFooter";
 import { useScrollToHash } from "@/hooks/use-scroll-to-hash";
+import { cn } from "@/lib/utils";
 
 export const SiteLayout = () => {
   const { pathname, hash } = useLocation();
+  const isHome = pathname === "/";
   useScrollToHash();
 
   useEffect(() => {
@@ -15,7 +17,7 @@ export const SiteLayout = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SiteHeader />
-      <main className="flex-1">
+      <main className={cn("flex-1", !isHome && "pt-16 md:pt-20")}>
         <Outlet />
       </main>
       <SiteFooter />

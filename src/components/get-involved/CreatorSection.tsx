@@ -57,8 +57,8 @@ export const CreatorSection = () => {
             </div>
             <div className="flex flex-wrap gap-3">
               <Button variant="outline" className="rounded-full" asChild>
-                <Link to="/programs">
-                  See All Programs <ArrowRight className="ml-2 h-4 w-4" />
+                <Link to="/awards#competitions">
+                  See Competitions <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button className="rounded-full bg-primary text-primary-foreground hover:bg-primary-light" asChild>

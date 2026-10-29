@@ -7,7 +7,7 @@ export const ConventionPrograms = () => {
     <section className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
         <SectionHeading
-          eyebrow="The Program"
+          eyebrow="From the Archive"
           title="Nine Days, Three Phases"
           description="In January 2026, over a hundred Buddhist creators from more than a dozen countries gathered in Bodh Gaya — the first global sangha of its kind."
           className="mb-14"

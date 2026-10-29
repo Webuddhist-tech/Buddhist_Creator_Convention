@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 export const HomeHero = () => {
@@ -21,15 +22,18 @@ export const HomeHero = () => {
             Buddhist Creators
           </h1>
           <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl">
-            A worldwide community of monastics, practitioners, and storytellers using digital media to carry the
-            Dharma further than ever before.
+            We create, empower, and connect Buddhist creators throughout the globe — carrying the Dharma into
+            the digital age together.
+          </p>
+          <p className="inline-flex w-fit items-center rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-accent ring-1 ring-white/25 backdrop-blur-sm">
+            BCC 2026 · January · Archived
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
             <Button size="lg" className="bg-primary hover:bg-primary-light text-primary-foreground shadow-elevated text-base px-8 py-6 rounded-full" asChild>
-              <a href="#upcoming">Explore Upcoming Events</a>
+              <Link to="/convention/2026">Revisit January 2026</Link>
             </Button>
             <Button size="lg" variant="outline" className="bg-white/10 border-white/40 text-white hover:bg-white/20 hover:text-white text-base px-8 py-6 rounded-full backdrop-blur-sm" asChild>
-              <a href="/convention">See What We Built in 2026</a>
+              <Link to="/awards#winners">See the Winners</Link>
             </Button>
           </div>
         </div>

@@ -12,7 +12,7 @@ const EVENTS = [
     description: "Hosted by Khyentse Foundation.",
     image: "/images/home/masterclass.jpg",
     featured: true,
-    to: "/programs#masterclass-2026",
+    to: "/convention#masterclass-2026",
   },
   {
     title: "Lhabab Duechen Challenge",
@@ -25,8 +25,8 @@ const EVENTS = [
   },
   {
     title: "Buddhist Creators Convention 2027",
-    date: "10 – 13 January 2027",
-    location: "Bodh Gaya, Bihar, India",
+    date: "Date TBD",
+    location: "Nepal",
     description: "The next global gathering, building on the momentum of 2026's first convention.",
     image: "/images/home/upcoming-gathering.jpg",
     featured: false,

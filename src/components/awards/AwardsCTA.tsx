@@ -14,7 +14,7 @@ export const AwardsCTA = () => {
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base sm:text-lg leading-relaxed text-white/85">
             Every winner this year started by simply making something. Join the next Buddhist Creators Convention
-            in Bodh Gaya and put your work in front of the sangha.
+            in Nepal and put your work in front of the sangha.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4">
             <Button
@@ -22,7 +22,7 @@ export const AwardsCTA = () => {
               className="w-full rounded-full bg-white text-primary hover:bg-white/90 sm:w-auto"
               asChild
             >
-              <Link to="/convention#next">
+              <Link to="/convention/2026#next">
                 Join BCC 2027 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

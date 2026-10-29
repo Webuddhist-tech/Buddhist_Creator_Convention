@@ -12,7 +12,7 @@ export const SiteFooter = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="space-y-4 md:col-span-1">
-              <Link to="/" className="flex items-center gap-2">
+              <Link to="/convention" className="flex items-center gap-2">
                 <img src="/images/brand/logo.png" alt="Buddhist Creators" className="h-9 w-auto" />
                 <span className="font-display text-lg font-semibold">Buddhist Creators</span>
               </Link>
@@ -24,10 +24,10 @@ export const SiteFooter = () => {
             <div className="space-y-3">
               <h3 className="text-base font-semibold">Explore</h3>
               <nav className="flex flex-col text-sm text-secondary-foreground/80 [&>*]:py-2 md:[&>*]:py-1">
-                <Link to="/about" className="hover:text-primary-light transition-colors">About</Link>
-                <Link to="/programs" className="hover:text-primary-light transition-colors">Programs</Link>
-                <Link to="/convention" className="hover:text-primary-light transition-colors">Convention</Link>
-                <Link to="/awards" className="hover:text-primary-light transition-colors">Awards & Winners</Link>
+                <Link to="/convention/2026" className="hover:text-primary-light transition-colors">2026 Convention Archive</Link>
+                <Link to="/awards" className="hover:text-primary-light transition-colors">Awards</Link>
+                <Link to="/influencer-club" className="hover:text-primary-light transition-colors">Influencer Clubs</Link>
+                <Link to="/creator-studio" className="hover:text-primary-light transition-colors">Creator Studio</Link>
                 <a
                   href={documentaryWatchUrl}
                   target="_blank"
@@ -36,7 +36,6 @@ export const SiteFooter = () => {
                 >
                   Watch the Documentary
                 </a>
-                <Link to="/get-involved" className="hover:text-primary-light transition-colors">Get Involved</Link>
               </nav>
             </div>
 

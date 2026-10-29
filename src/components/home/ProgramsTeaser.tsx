@@ -23,7 +23,7 @@ const PROGRAMS = [
     description:
       "An intensive training — 80% practice, 20% theory — equipping creators with the skills to share the Dharma online.",
     image: "/images/home/masterclass.jpg",
-    to: "/programs",
+    to: "/convention#masterclass-2026",
   },
 ];
 

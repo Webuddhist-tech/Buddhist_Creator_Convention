@@ -8,19 +8,19 @@ const PATHS = [
     title: "As a Creator",
     description: "Join an ongoing challenge, or bring your content to the next Convention and Masterclass.",
     icon: Sparkles,
-    to: "/get-involved#creator",
+    to: "/awards#competitions",
   },
   {
     title: "As an Institution or Group",
     description: "Partner with us on the Convention and the WeBuddhist Influencer Masterclass.",
     icon: Building2,
-    to: "/get-involved#partner",
+    to: "/convention#partner",
   },
   {
     title: "Join Our Team",
     description: "Help us build the movement from the inside — we'd love to hear from you.",
     icon: Users,
-    to: "/get-involved#team",
+    to: "/convention#team",
   },
 ];
 
